@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ray-Ban Gooey Slider | 3D Animated Banner</title>
+
+    <link rel="preconnect" href="https://res.cloudinary.com" />
+    <link
+      rel="preload"
+      href="https://res.cloudinary.com/mbilalmansuri/image/upload/v1786796826/rayban/slide1.webp"
+      as="image"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href="https://res.cloudinary.com/mbilalmansuri/image/upload/v1786796825/rayban/banner-right.webp"
+      as="image"
+      type="image/webp"
+      media="(min-width: 640px)"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href="./fonts/ubuntu_400_latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="icon"
+      href="https://res.cloudinary.com/mbilalmansuri/image/upload/v1786796825/rayban/logo.webp"
+      type="image/webp"
+    />
+    <link rel="canonical" href="https://rayban-gooey-slider.vercel.app" />
+
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="description"
+      content="A custom slider featuring a 3D gooey effect, giving a modern animated look to Ray-Ban's hero section using Shery.js and GSAP."
+    />
+    <meta
+      name="keywords"
+      content="ray-ban, gooey slider, 3d animation, shery.js, mohammad bilal mansuri"
+    />
+    <meta name="author" content="Mohammad Bilal Mansuri" />
+    <link rel="author" href="https://github.com/mbilalmansuri" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rayban-gooey-slider.vercel.app" />
+    <meta
+      property="og:title"
+      content="Ray-Ban Gooey Slider | 3D Animated Banner"
+    />
+    <meta
+      property="og:description"
+      content="A custom slider featuring a 3D gooey effect, giving a modern animated look to Ray-Ban's hero section using Shery.js and GSAP."
+    />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/mbilalmansuri/image/upload/v1786796826/rayban/slide1.webp"
+    />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:image:alt" content="Ray-Ban Gooey Slider Preview" />
+    <meta property="og:site_name" content="Ray-Ban Gooey Slider" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://rayban-gooey-slider.vercel.app" />
+    <meta
+      name="twitter:title"
+      content="Ray-Ban Gooey Slider | 3D Animated Banner"
+    />
+    <meta
+      name="twitter:description"
+      content="A custom slider featuring a 3D gooey effect, giving a modern animated look to Ray-Ban's hero section using Shery.js and GSAP."
+    />
+    <meta
+      name="twitter:image"
+      content="https://res.cloudinary.com/mbilalmansuri/image/upload/v1786796826/rayban/slide1.webp"
+    />
+    <meta name="twitter:creator" content="@mbilalmansuri" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Ray-Ban Gooey Slider",
+        "url": "https://rayban-gooey-slider.vercel.app",
+        "description": "A custom slider featuring a 3D gooey effect, giving a modern animated look to Ray-Ban's hero section using Shery.js and GSAP.",
+        "author": {
+          "@type": "Person",
+          "name": "Mohammad Bilal Mansuri",
+          "url": "https://github.com/mbilalmansuri",
+          "sameAs": [
+            "https://github.com/mbilalmansuri",
+            "https://www.linkedin.com/in/mbilalmansuri",
+            "https://x.com/mbilalmansuri",
+            "https://mbilalmansuri.notion.site/portfolio"
+          ]
+        }
+      }
+    </script>
+  </head>
+
+  <body class="w-full h-full relative bg-black text-white overflow-x-hidden">
+    <div
+      class="loader w-full h-dvh bg-red-500 absolute left-0 top-0 z-50 text-8xl flex justify-center items-center transition-all duration-300"
+      role="status"
+      aria-label="Loading"
+    >
+      <div class="lg:w-8 w-6 fill-white transition-all animate-spin relative">
+        <svg viewBox="0 0 512 512" aria-hidden="true">
+          <path
+            d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <main class="w-full relative">
+      <section
+        id="banner"
+        class="w-full h-dvh relative overflow-hidden"
+        aria-label="Ray-Ban product slider"
+      >
+        <div id="banner-back" class="size-full relative">
+          <img
+            class="size-full object-cover object-center"
+            src="https://res.cloudinary.com/mbilalmansuri/image/upload/v1786796826/rayban/slide1.webp"
+            alt="Ray-Ban sunglasses collection - David Chang style"
+            width="1920"
+            height="1080"
+            fetchpriority="high"
+          />
+          <img
+            class="size-full object-cover object-center"
+            src="https://res.cloudinary.com/mbilalmansuri/image/upload/v1786796826/rayban/slide2.webp"
+            alt="Ray-Ban sunglasses collection - Susan Jamal style"
+            width="1920"
+            height="1080"
+            loading="lazy"
+          />
+          <img
+            class="size-full object-cover object-center"
+            src="https://res.cloudinary.com/mbilalmansuri/image/upload/v1786796826/rayban/slide3.webp"
+            alt="Ray-Ban sunglasses collection - Olivia Wilson style"
+            width="1920"
+            height="1080"
+            loading="lazy"
+          />
+          <img
+            class="size-full object-cover object-center"
+            src="https://res.cloudinary.com/mbilalmansuri/image/upload/v1786796826/rayban/slide4.webp"
+            alt="Ray-Ban sunglasses collection - Daniel Lee style"
+            width="1920"
+            height="1080"
+            loading="lazy"
+          />
+          <img
+            class="size-full object-cover object-center"
+            src="https://res.cloudinary.com/mbilalmansuri/image/upload/v1786796827/rayban/slide5.webp"
+            alt="Ray-Ban sunglasses collection - Liam Miller style"
+            width="1920"
+            height="1080"
+            loading="lazy"
+          />
+        </div>
+
+        <div
+          class="size-full absolute top-0 left-0 md:bg-black/25 bg-black/50 pointer-events-none z-10"
+          aria-hidden="true"
+        ></div>
+
+        <div
+          id="banner-front"
+          class="size-full absolute top-0 left-0 z-20 pointer-events-none bg-transparent flex flex-col items-center justify-center gap-5"
+        >
+          <div
+            class="size-full max-w-[1920px] flex flex-col relative text-white"
+          >
+            <nav aria-label="Main navigation">
+              <div
+                class="w-full sm:p-5 sm:pl-3 p-3 pl-1.5 flex items-center md:gap-10 xs:gap-5 gap-3"
+              >
+                <img
+                  src="https://res.cloudinary.com/mbilalmansuri/image/upload/v1786796825/rayban/logo.webp"
+                  alt="Ray-Ban"
+                  width="256"
+                  height="137"
+                  class="sm:h-16 xs:h-12 h-10 w-auto min-w-fit"
+                />
+
+                <div
+                  class="w-full flex items-center lg:justify-between justify-end md:gap-10 xs:gap-5 gap-3"
+                >
+                  <div class="flex items-center md:gap-10 xs:gap-5 gap-3">
+                    <a class="navItem" href="#">Products</a>
+                    <a class="navItem" href="#">About</a>
+                  </div>
+                  <div class="flex items-center md:gap-10 xs:gap-5 gap-3">
+                    <a class="navItem" href="#">Pricing</a>
+                    <a class="navItem" href="#">Contact</a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+
+            <div
+              class="w-full sm:h-auto h-full p-5 flex sm:flex-row flex-col items-center sm:justify-between justify-end absolute left-0 sm:top-1/2 sm:-translate-y-1/2 sm:gap-0 gap-10"
+            >
+              <div
+                id="banner-left"
+                class="md:w-3/5 sm:w-[70%] w-full flex flex-col sm:items-start items-center gap-5"
+              >
+                <h1 class="banner-heading">
+                  <span class="h1 absolute top-0 left-0"> David Chang </span>
+                  <span class="h1 absolute top-full left-0 opacity-0">
+                    Susan Jamal
+                  </span>
+                  <span class="h1 absolute top-full left-0 opacity-0">
+                    Olivia Wilson's
+                  </span>
+                  <span class="h1 absolute top-full left-0 opacity-0">
+                    Daniel Lee
+                  </span>
+                  <span class="h1 absolute top-full left-0 opacity-0">
+                    Liam Miller's
+                  </span>
+                </h1>
+
+                <p class="banner-heading" aria-hidden="true">
+                  <span class="h1 absolute top-0 left-0"> Gives Zero </span>
+                  <span class="h1 absolute top-full left-0 opacity-0">
+                    Indifference Is
+                  </span>
+                  <span class="h1 absolute top-full left-0 opacity-0">
+                    Apathy Is
+                  </span>
+                  <span class="h1 absolute top-full left-0 opacity-0">
+                    Feels
+                  </span>
+                  <span class="h1 absolute top-full left-0 opacity-0">
+                    Boredom Is
+                  </span>
+                </p>
+
+                <p class="banner-heading" aria-hidden="true">
+                  <span class="h1 absolute top-0 left-0"> Funks. </span>
+                  <span class="h1 absolute top-full left-0 opacity-0">
+                    Absolute.
+                  </span>
+                  <span class="h1 absolute top-full left-0 opacity-0">
+                    Total.
+                  </span>
+                  <span class="h1 absolute top-full left-0 opacity-0">
+                    Nothing.
+                  </span>
+                  <span class="h1 absolute top-full left-0 opacity-0">
+                    Max.
+                  </span>
+                </p>
+
+                <button
+                  class="sm:mt-5 mt-3 sm:ml-2 bg-white text-black lg:px-6 lg:py-3 px-5 py-2.5 lg:text-lg sm:text-base text-sm uppercase hover:bg-white/60 pointer-events-auto"
+                >
+                  Explore Now
+                </button>
+              </div>
+
+              <div
+                id="banner-right"
+                class="xl:w-1/5 lg:w-1/4 sm:w-[30%] xs:w-3/4 w-[90%] flex flex-col sm:items-end items-center gap-5 sm:text-right text-center"
+              >
+                <p class="lg:text-base text-sm">
+                  Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <img
+                  class="sm:block hidden w-full aspect-video object-cover object-center"
+                  src="https://res.cloudinary.com/mbilalmansuri/image/upload/v1786796825/rayban/banner-right.webp"
+                  alt="Ray-Ban product showcase"
+                  width="500"
+                  height="333"
+                  fetchpriority="high"
+                />
+
+                <p class="lg:text-base text-sm">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+                  dicta tempora quae magnam sint tempore asperiores voluptatibus
+                  voluptatum nostrum vitae.
+                </p>
+
+                <p class="lg:text-base text-sm">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                  corporis cumque voluptatum aliquam quia, cum neque assumenda,
+                  dolores impedit velit, a illum in ducimus natus.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/sheryjs/dist/Shery.js"
+      defer
+    ></script>
+    <script src="app.js" defer></script>
+  </body>
+</html>

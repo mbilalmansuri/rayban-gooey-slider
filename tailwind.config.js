@@ -1,12 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./dist/**/*.{html,js}"],
-  theme: {
-    extend: {
-      screens: {
-        xs: "480px",
-      },
-    },
-  },
+  content: ["./index.html", "./app.js"],
+  theme: { extend: { screens: { xs: "480px" } } },
   plugins: [],
 };
